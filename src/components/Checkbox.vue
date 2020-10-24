@@ -74,7 +74,7 @@ export default {
   stroke: $yellow;
 }
 /* Focused */
-.check__input:focus-within + * .check__focus {
+.check__input:focus-visible + * .check__focus {
   fill: $yellow;
 }
 /* Disabled */
