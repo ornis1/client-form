@@ -1,0 +1,1 @@
+.alert{position:fixed;top:20px;left:0;right:0}.alert-content{background-color:#4caf50;color:#fff;padding:16px;border-radius:10px;display:inline-flex;justify-content:center;align-items:center;font-size:16px}.alert__icon{display:flex;margin-right:10px}.fade-enter-active,.fade-leave-active{transition:opacity .5s}.fade-enter,.fade-leave-to{opacity:0}
