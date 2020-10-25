@@ -1,6 +1,11 @@
 <template>
   <label class="check option">
-    <input class="check__input" type="checkbox" />
+    <input
+      class="check__input"
+      type="checkbox"
+      :checked="value"
+      v-on="listeners"
+    />
     <svg class="check__box" viewBox="0 0 20 20">
       <rect class="check__focus" width="20" height="20" rx="4" />
       <rect class="check__square" x="3" y="3" width="14" height="14" rx="2" />
@@ -17,12 +22,24 @@ export default {
     label: {
       type: String,
       default: ''
+    },
+    value: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     id() {
       const { id } = this.$attrs
       return id ? id : new Date().getTime()
+    },
+    listeners() {
+      return {
+        ...this.$listeners,
+        input: e => {
+          this.$emit('input', e.target.checked)
+        }
+      }
     }
   }
 }
