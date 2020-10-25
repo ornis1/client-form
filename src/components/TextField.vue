@@ -83,9 +83,6 @@ legend {
   color: $danger;
 }
 .text-field {
-  &__fieldset {
-    margin-bottom: 24px;
-  }
   &__legend {
     color: #474d57;
     font-size: 12px;
